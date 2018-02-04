@@ -37,10 +37,10 @@
 //
 // Servos
 //
-#define SERVO0_PIN         46 // AUX3-6
-#define SERVO1_PIN         47 // AUX3-5
-#define SERVO2_PIN         48 // AUX3-4
-#define SERVO3_PIN         49 // AUX3-3
+//#define SERVO0_PIN         46 // AUX3-6
+//#define SERVO1_PIN         47 // AUX3-5
+//#define SERVO2_PIN         48 // AUX3-4
+//#define SERVO3_PIN         49 // AUX3-3
 
 //
 // Limit Switches
@@ -65,18 +65,22 @@
 #define X_STEP_PIN         58
 #define X_DIR_PIN          57
 #define X_ENABLE_PIN       59
+#define X_CS_PIN           49 // AUX3-3
 
 #define Y_STEP_PIN          5
 #define Y_DIR_PIN          17
 #define Y_ENABLE_PIN        4
+#define Y_CS_PIN           48 // AUX3-4
 
 #define Z_STEP_PIN         16
 #define Z_DIR_PIN          11
 #define Z_ENABLE_PIN        3
+#define Z_CS_PIN           47 // AUX3-5
 
 #define E0_STEP_PIN        28
 #define E0_DIR_PIN         27
 #define E0_ENABLE_PIN      29
+#define E0_CS_PIN          46 // AUX3-6
 
 #define E1_STEP_PIN        25
 #define E1_DIR_PIN         24
@@ -132,11 +136,13 @@
 //
 // LCD / Controller
 //
-#define BEEPER_PIN         61
+#define BEEPER_PIN         -1
+//#define BEEPER_PIN         61
+#define LIGHT_PIN 7
 
-#define BTN_EN1            44
-#define BTN_EN2            45
-#define BTN_ENC            33
+#define BTN_EN1 44
+#define BTN_EN2 43
+#define BTN_ENC 45 // the click
 
 #if ENABLED(REPRAPWORLD_GRAPHICAL_LCD)
 
@@ -153,6 +159,12 @@
   #define LCD_PINS_D5      30
   #define LCD_PINS_D6      39
   #define LCD_PINS_D7      15
+//  #define LCD_PINS_RS      -1
+//  #define LCD_PINS_ENABLE  -1
+//  #define LCD_PINS_D4      -1
+//  #define LCD_PINS_D5      -1
+//  #define LCD_PINS_D6      -1
+//  #define LCD_PINS_D7      -1
 
   #define SHIFT_CLK        43
   #define SHIFT_LD         35
